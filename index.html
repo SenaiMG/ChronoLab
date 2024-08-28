@@ -10,6 +10,12 @@
       *{
         font-family: 'Open Sans';
       }
+
+      @media (max-width: 600px) {
+        .icontec{
+          padding: 10px;
+        }
+      }
     </style>
 </head>
 <body>   
@@ -32,6 +38,7 @@
   </header>
   <!-- conteúdo principal -->
   <main class="mt-5">
+    <!-- sobre -->
     <div class="container pt-5">
       <div class="row">
         <div class="col-lg-4">
@@ -40,8 +47,8 @@
               <img src="assets/img/logo_P.png" alt="LOGO"
                 class="rounded-circle img-fluid" style="width: 150px;">
               <h5 class="my-3">ChronoLAB</h5>
-              <p class="text-muted mb-1">Senai</p>
-              <p class="text-muted mb-4">São João Nepomuceno</p>
+              <p class="text-muted mb-1">SENAI</p>
+              <p class="text-muted mb-4">São João Nepomuceno/MG</p>
             </div>
           </div>
         </div>
@@ -65,7 +72,9 @@
           </div>  
         </div>
       </div>
-    </div>  
+    </div>
+    <!-- fim do sobre  -->
+    <!-- equipe -->
     <div class="container-fluid bg-dark pt-5 mt-5">    
       <div class="container border" style="margin-top: 60px; background-color: rgba(255, 255, 255, 0.932);"> 
         <div>
@@ -73,7 +82,7 @@
         </div>
         <div class="row text-center">
           <div class="">    
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+            <img src="assets/img/rapael.jpeg" class="img-fluid rounded-5" width="140px" height="140px" alt="">
             <h3 class="fw-normal text-center">Raphael Coelho</h3>
             <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
               Sobre Mim
@@ -92,7 +101,7 @@
                         <div class="col-lg-4">
                           <div class="card mb-4">
                             <div class="card-body text-center">
-                              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                              <img src="assets/img/rapael.jpeg" class="img-fluid" alt="">
                               <h5 class="my-3">Raphael Venâncio Coelho</h5>
                               <p class="text-muted mb-1">Scrum-Master</p>
                               <p class="text-muted mb-4">Back-End</p>
@@ -149,7 +158,7 @@
         <div class="p-5">  
           <div class="row text-center mt-5">
             <div class="col-lg-4">
-              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+              <img src="assets/img/hadson.jpeg" class="img-fluid rounded-5" width="140px" height="140px" alt="">
               <h3 class="fw-normal">Hadson Nepomuceno</h3>
               <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal2">
                 Sobre Mim
@@ -168,7 +177,7 @@
                           <div class="col-lg-4">
                             <div class="card mb-4">
                               <div class="card-body text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                                <img src="assets/img/hadson.jpeg" class="img-fluid" alt="">
                                 <h5 class="my-3">Hadson Nepomuceno de Oliveira</h5>
                                 <p class="text-muted mb-1" style="font-family: Open Sans">Back-End</p>
                                 <div class="row">  
@@ -221,7 +230,7 @@
               <!-- Fim do Modal -->
             </div>
             <div class="col-lg-4">
-              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+              <img src="assets/img/igor.jpeg" class="img-fluid rounded-5" width="160px" height="160px" alt="">
               <h3 class="fw-normal">Igor Alves</h3>
               <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal3">
                 Sobre Mim
@@ -240,7 +249,7 @@
                           <div class="col-lg-4">
                             <div class="card mb-4">
                               <div class="card-body text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                                <img src="assets/img/igor.jpeg" class="img-fluid" alt="">
                                 <h5 class="my-3">Igor Ribeiro Alves</h5>
                                 <p class="text-muted mb-1" style="font-family: Open Sans">Front-End</p>
                                 <div class="row">  
@@ -293,7 +302,7 @@
               <!-- Fim do Modal -->
             </div>
             <div class="col-lg-4">
-              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+              <img src="assets/img/rogerio.jpeg" class="img-fluid rounded-5" width="140px" height="140px" alt="">
               <h3 class="fw-normal">Rogério Silva</h3>
               <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal6">
                 Sobre Mim
@@ -312,7 +321,7 @@
                           <div class="col-lg-4">
                             <div class="card mb-4">
                               <div class="card-body text-center">
-                                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                                <img src="assets/img/rogerio.jpeg" class="img-fluid" alt="">
                                 <h5 class="my-3">Rogério Silva</h5>
                                 <p class="text-muted mb-1">Back-End</p>
                                 <div class="row">  
@@ -367,7 +376,7 @@
           </div>
         <div class="row text-center" style="margin-top: 70px;">
           <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+            <img src="assets/img/flavio.jpeg" class="img-fluid rounded-5" width="140px" height="140px" alt="">
             <h3 class="fw-normal">Flávio Junior</h3>
             <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal5">
               Sobre Mim
@@ -386,7 +395,7 @@
                         <div class="col-lg-4">
                           <div class="card mb-4">
                             <div class="card-body text-center">
-                              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                              <img src="assets/img/flavio.jpeg" class="img-fluid" alt="">
                               <h5 class="my-3">Flávio Junior</h5>
                               <p class="text-muted mb-1" style="font-family: Open Sans">Test</p>
                               <div class="row">  
@@ -439,7 +448,7 @@
             <!-- Fim do Modal -->
           </div>
           <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+            <img src="assets/img/eduardo.jpeg" class="img-fluid rounded-5" width="140px" height="140px" alt="">
             <h3 class="fw-normal">Eduardo Souza</h3>
             <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal7">
               Sobre Mim
@@ -458,7 +467,7 @@
                         <div class="col-lg-4">
                           <div class="card mb-4">
                             <div class="card-body text-center">
-                              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                              <img src="assets/img/eduardo.jpeg" class="img-fluid" alt="">
                               <h5 class="my-3">Eduardo Souza Ribeiro</h5>
                               <p class="text-muted mb-1" style="font-family: Open Sans">Front-End</p>
                               <div class="row">  
@@ -511,7 +520,7 @@
             <!-- Fim do Modal -->
           </div>
           <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+            <img src="assets/img/urick.jpeg" class="img-fluid rounded-5" width="130px" height="130px" alt="">
             <h3 class="fw-normal">Urick Carpanez</h3>
             <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal8">
               Sobre Mim
@@ -530,7 +539,7 @@
                         <div class="col-lg-4">
                           <div class="card mb-4">
                             <div class="card-body text-center">
-                              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                              <img src="assets/img/urick.jpeg" class="img-fluid" alt="">
                               <h5 class="my-3">Urick Carpanez</h5>
                               <p class="text-muted mb-1" style="font-family: Open Sans">Front-End</p>
                               <div class="row">  
@@ -588,6 +597,8 @@
     </div>
     <div class="bg-dark" style="padding: 80px;">
     </div>
+    <!-- fim da equipe -->
+    <!-- sobre equipe -->
     <div class="container">  
       <div class="m-5">  
         <div class="row featurette">
@@ -600,11 +611,47 @@
               Estamos comprometidos em ser parceiros confiáveis em sua jornada digital, oferecendo suporte contínuo e soluções que evoluem com o seu negócio. Seja para criar um novo software, melhorar um sistema existente ou explorar novas possibilidades tecnológicas, estamos aqui para ajudar a sua empresa a alcançar o próximo nível</p>
           </div>
           <div class="col-md-5 bg-image hover-zoom">
-            <img src="assets/img/Chrono.png" alt="" class="img-fluid w-100" style="border-radius: 5px;">
+            <img src="assets/img/equipe.JPG" alt="" width="420px" height="600px" class="" style="border-radius: 5px;">
           </div>
         </div>
       </div>
-    </div>  
+    </div>
+    <!-- fim do sobre a equipe   -->
+    <!-- tecnologia usadas -->
+    <div class="container pt-5 pb-5 text-center">
+      <div class="pb-3">
+        <h1> Tecnologias </h1>
+      </div>
+      <div class="row pt-3 border border-2 rounded-2 p-2">
+        <div class="col-lg-3"> 
+          <img src="assets/img/html.png" class="img-fluid icontec" width="150px" height="150px" alt=""> 
+        </div>
+        <div class="col-lg-3"> 
+          <img src="assets/img/css.png" class="img-fluid icontec" width="110px" height="110px" alt="">
+        </div>
+        <div class="col-lg-3"> 
+          <img src="assets/img/js.png" class="img-fluid icontec" width="110px" height="110px" alt="">
+        </div>
+        <div class="col-lg-3"> 
+          <img src="assets/img/python.png" class="img-fluid icontec" width="150px" height="150px" alt="">
+        </div>
+      </div>
+      <div class="row mt-5 pt-5 border border-2 rounded-2">
+        <div class="col-lg-3"> 
+          <img src="assets/img/bootstrap.png" class="img-fluid icontec" width="150px" height="150px" alt="">
+        </div>
+        <div class="col-lg-3"> 
+          <img src="assets/img/django.png" class="img-fluid icontec" width="120px" height="120px" alt="">
+        </div>
+        <div class="col-lg-3"> 
+          <img src="assets/img/mysql.png" class="img-fluid icontec" width="150px" height="150px" alt="">
+        </div>
+        <div class="col-lg-3"> 
+          <img src="assets/img/vscode.png" class="img-fluid icontec" width="110px" height="110px" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- contate-nos -->
     <section class="container-fluid border bg-dark" style="background-image: url('assets/img/mapa.jpg'); background-size: cover; padding-bottom: 80px; padding-top: 50px; background-position: center;">    
       <div class="container" style="background-image: url('assets/img/mapa2.jpg'); padding: 80px; background-position: center;">  
         <div class="text-center pt-3">
@@ -643,7 +690,9 @@
         </div>
       </div>  
     </section>
+    <!-- fim do contate -->
   </main>
+    <!-- fim do conteudo principal -->
     <!-- FOOTER -->
     <footer class="">
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
@@ -652,5 +701,6 @@
         ChronoLAB © 2024 All rights reserved
       </div>  
     </footer>
+    <!-- fim do footer -->
 </body>
 </html>
