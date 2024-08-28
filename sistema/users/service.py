@@ -85,3 +85,15 @@ class UserService:
             paginated_users = paginator.page(paginator.num_pages)
 
         return paginated_users
+    
+    @staticmethod
+    def list_all_email_users():
+        
+        email_all_users = UserService.get_all_users()
+        list_email=[]
+        
+        for x in email_all_users.email:
+        
+            list_email.append(x)
+        
+        return list_email
