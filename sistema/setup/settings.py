@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'tipo',
     'users',
     'notifications',
-    'rest_framework',
 ]
 
 MIDDLEWARE = [
