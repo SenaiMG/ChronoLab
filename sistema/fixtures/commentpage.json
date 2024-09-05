@@ -1,0 +1,38 @@
+[
+    {
+        "model": "produto.commentpage", 
+
+        "pk": 1,
+        "fields":{
+            "comment":"Gostei muito da coleção de inverno", 
+            "id_user_id": 1 
+        }
+    },
+    {
+        "model": "produto.commentpage", 
+
+        "pk": 2,
+        "fields":{
+            "comment":"Gostei muito da coleção de verao", 
+            "id_user_id": 1
+        }
+    },
+    {
+        "model": "produto.commentpage", 
+
+        "pk": 3,
+        "fields":{
+            "comment":"Achei o site muito legal", 
+            "id_user_id":1
+        }
+    },
+    {
+        "model": "produto.commentpage", 
+
+        "pk": 4,
+        "fields":{
+            "comment":"Queria mais conteudo", 
+            "id_user_id":1
+        }
+    }
+]

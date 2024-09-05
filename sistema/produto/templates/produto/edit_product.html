@@ -1,0 +1,26 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Editar Produto</title>
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center" style="margin-right: 0px;">
+    <div class="col-md-6">
+        <div class="p-5">
+            <h1 class="text-center">Editar Produto</h1>
+        </div>
+        <div class="p-5 mb-5" style="background-color: #eef7ff; color:black; border-radius: 10px;">
+            <form method="post"  enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.product_form.as_p }}
+                {{ form.product_cost_form.as_p }}
+                <div class="d-flex justify-content-center ">
+                    <button type="submit" class="btn mt-3 btn-success" style="background-color: #00b7ff; border: 0;">Atualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

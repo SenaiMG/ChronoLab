@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-    <title>Product Single</title>
+    <title>Detalhes do Produto</title>
 {% endblock %}
 
 {% block style %}
@@ -26,33 +26,28 @@
             <div class="row">
                 <div class="col-lg-5 mt-5">
                     <div class="card mb-3">
-                        <img class="card-img img-fluid" src="{% static 'assets/img/Ultra realistic full body photo of an fashionable.webp' %}" alt="Card image cap" id="product-detail">
+                        <img class="card-img img-fluid" src="{{product.path.url}}" alt="Card image cap" id="product-detail">
                     </div>
                 </div>
                 <!-- col end -->
                 <div class="col-lg-7 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h1 class="h2">Active Wear</h1>
-                            <p class="h3 py-2">R$25.00</p>
+                            <h1 class="h2">{{product.name}}</h1>
+                            <p class="h3 py-2">R${{product.get_price}}</p>
                             <a style="text-decoration: none;" href="#comments">
                                 <p class="py-2">
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <span class="list-inline-item text-dark">Rating 4.8 | 36 Comentários</span>
+                                    <span class="list-inline-item text-dark"> {{total_comments}} Comentários</span>
                                 </p>
                             </a>
                             
 
                             <h6>Descrição:</h6>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse. Donec condimentum elementum convallis. Nunc sed orci a diam ultrices aliquet interdum quis nulla.</p>
+                            <p>{{product.description}}</p>
 
                             <h6>Coleção:</h6>
-                            <a style="text-decoration: none;" href="">
-                                <p>Inverno 2024</p>
+                            <a style="text-decoration: none;" href="{% url 'collection_detail' product.collection.id %}">
+                                <p>{{product.collection.name}}</p>
                             </a>
                         </div>
                     </div>
@@ -68,29 +63,54 @@
             <h2 class="h2">
                 Comentários
             </h2>
-            <div class="container p-2">
-                <div class="d-flex">
+            {% for comment in comments %}
+            <div class="container-fluid p-2 mt-4" style="border: 3px black groove; border-radius: 10px;" >
+                <div class="d-flex align-items-center">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
                         </svg>
                     </div>
-                    <div class="p-1">
-                        <p>Hadson</p>
+                    <div class="p-1 d-flex w-100 justify-content-between">
+                        <div class="d-flex justify-content-start">
+                            <h5 style="margin: 8px;">{{comment.id_user.username}}</h5>
+                        </div>
+                        {% if user.id == comment.id_user.id %}
+                        <div class="d-flex justify-content-end">                            
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#comment-product-{{ comment.id }}"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="blue" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                            </svg>
+                            </button>
+                            <form action="{% url 'delete_comment_product' %}" method="post" style="display:inline;">
+                            
+                            {% csrf_token %}
+                            <input type="hidden" name="comment_id" value="{{ comment.id }}">
+                            <button type="submit" class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                    <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
+                                </svg>
+                            </button>
+                            </form>   
+                        </div>   
+                        
+                        {% endif %}
                     </div>
                 </div>
-                <div>
-                    <p>Muito foda essa roupa</p>
+                <hr>
+                <div class="text-break">
+                    <h5 class="">Conteudo:</h5>
+                    <p>{{comment.comment}}</p>
                 </div>
             </div>
-            <form action="">
-                <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                    <label for="floatingTextarea2">Adicionar Comentário</label>
-                </div>
+            {% include 'produto/partials/_edit_comment_product.html' %}
+            {% endfor %}
+            <form method="post" class=" pt-3" action="{% url 'comment_product' product.id user.id %}" >
+                {% csrf_token %}
+                {{ form_comment_product.as_p }}
                 <div class="text-center py-2">
-                    <button type="button" class="btn btn-primary">Comentar</button>
+                    <button type="submit" class="btn btn-primary">Comentar</button>
                 </div>
             </form>
         </div>

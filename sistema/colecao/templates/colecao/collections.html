@@ -1,0 +1,74 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Coleções</title>
+{% endblock %}
+
+{% block style %}
+<style>
+  .title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    margin: 10px;
+  }
+
+  .btn-group {
+    width: 300px;
+    height: 100px;
+    margin-top: 40px;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<section>
+
+  <div class="d-flex justify-content-center">
+    <div class="pt-5">
+      <h1>Coleções</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="d-flex row justify-content-center">
+      {% for collection in collections %}
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 py-2">
+        <a href="{% url 'collection_detail' collection.id %}" style="text-decoration: none; color: black;">
+        <div class="card" style="height: 400px;">
+          <div class="card-body d-flex row">
+            <div class="d-flex justify-content-center">
+              <img src="{{ collection.image.url }}" alt="" width="150px" height="150px" style="border-radius: 50%;">
+            </div>
+            <div>
+              <h5 class="card-title text-center display-7" style="font-size: 24px;">{{collection.name}}</h5>
+              <hr style="margin: 2px 0px 2px 0px;">
+              <p class="card-text text-center " style="font-size: 18px;">{{collection.description}}</p>
+            </div>
+          </div>
+        </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination d-flex justify-content-center">
+          {% if collections.has_previous %}
+              <li class="page-item"><a class="page-link" href="?page={{ collections.previous_page_number }}">Anterior</a></li>
+              <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+          {% endif %}
+          <li class="page-item active"><a class="page-link" href="#">{{ collections.number }}</a></li>
+          {% if collections.has_next %}
+              <li class="page-item"><a class="page-link" href="?page={{ collections.paginator.num_pages }}">{{ collections.paginator.num_pages }}</a></li>
+              <li class="page-item"><a class="page-link" href="?page={{ collections.next_page_number }}">Próxima</a></li>
+          {% endif %}
+      </ul>
+  </nav>  
+  </div>
+</section>
+{% endblock %}

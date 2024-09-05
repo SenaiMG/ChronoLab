@@ -2,7 +2,7 @@ from users.repository import UserRepository
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 class UserService:
-    @staticmethod
+
     @staticmethod
     def list_all_users(page=1, per_page=10):
         """
@@ -23,6 +23,18 @@ class UserService:
             users = paginator.page(paginator.num_pages)
 
         return users
+    
+    @staticmethod
+    def list_all_email_users():
+
+        email_all_users = UserService.get_all_users()
+        list_email=[]
+
+        for user in email_all_users:
+
+            list_email.append(user.email)
+
+        return list_email
 
     @staticmethod
     def get_user_details(user_id):
@@ -64,36 +76,24 @@ class UserService:
         return UserRepository.get_all_users()
     
 
-    @staticmethod
-    def search_users(search_query, page=1, per_page=10):
-        """
-        Busca usuários pelo first_name ou email e realiza a paginação dos resultados.
+    # @staticmethod
+    # def search_users(search_query, page=1, per_page=10):
+    #     """
+    #     Busca usuários pelo first_name ou email e realiza a paginação dos resultados.
 
-        :param search_query: Termo de busca inserido pelo usuário.
-        :param page: Número da página atual.
-        :param per_page: Quantidade de itens por página.
-        :return: Página atual com os usuários e informações de paginação.
-        """
-        users = UserRepository.search_users(search_query)
-        paginator = Paginator(users, per_page)
+    #     :param search_query: Termo de busca inserido pelo usuário.
+    #     :param page: Número da página atual.
+    #     :param per_page: Quantidade de itens por página.
+    #     :return: Página atual com os usuários e informações de paginação.
+    #     """
+    #     users = UserRepository.search_users(search_query)
+    #     paginator = Paginator(users, per_page)
 
-        try:
-            paginated_users = paginator.page(page)
-        except PageNotAnInteger:
-            paginated_users = paginator.page(1)
-        except EmptyPage:
-            paginated_users = paginator.page(paginator.num_pages)
+    #     try:
+    #         paginated_users = paginator.page(page)
+    #     except PageNotAnInteger:
+    #         paginated_users = paginator.page(1)
+    #     except EmptyPage:
+    #         paginated_users = paginator.page(paginator.num_pages)
 
-        return paginated_users
-    
-    @staticmethod
-    def list_all_email_users():
-        
-        email_all_users = UserService.get_all_users()
-        list_email=[]
-        
-        for x in email_all_users.email:
-        
-            list_email.append(x)
-        
-        return list_email
+    #     return paginated_users

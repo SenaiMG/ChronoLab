@@ -1,0 +1,74 @@
+[
+    {
+        "model": "tipo.type", 
+
+        "pk": 1,
+        "fields":{
+            "name": "Camisa"
+        }
+    },
+    {
+        "model": "tipo.type", 
+
+        "pk": 2,
+        "fields":{
+            "name": "Jaqueta"
+        }
+    },
+    {
+        "model": "tipo.type", 
+
+        "pk": 3,
+        "fields":{
+            "name": "Calça"
+        }
+    },
+    {
+        "model": "tipo.type", 
+
+        "pk": 4,
+        "fields":{
+            "name": "Vestido"
+        }
+    },
+    {
+        "model": "tipo.type", 
+
+        "pk": 5,
+        "fields":{
+            "name": "Saia"
+        }
+    },
+    {
+        "model": "tipo.type", 
+
+        "pk": 6,
+        "fields":{
+            "name": "Sueter"
+        }
+    },
+    {
+        "model": "tipo.type", 
+
+        "pk": 7,
+        "fields":{
+            "name": "Moleton"
+        }
+    },
+    {
+        "model": "tipo.type", 
+
+        "pk": 8,
+        "fields":{
+            "name": "Sobretudo"
+        }
+    },
+    {
+        "model": "tipo.type", 
+
+        "pk": 9,
+        "fields":{
+            "name": "Conjunto"
+        }
+    }
+]

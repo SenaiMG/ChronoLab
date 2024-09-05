@@ -1,0 +1,72 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Detalhaes da Coleção</title>
+{% endblock %}
+
+{% block style %}
+    <link rel="apple-touch-icon" href="{% static 'assets/img/apple-icon.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo.css' %}">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap'">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}">
+
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/slick.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/slick-theme.css' %}">
+{% endblock %}    
+
+{% block content %}
+    <!-- Open Content -->
+    <section>
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-lg-5 mt-5">
+                    <div class="card mb-3">
+                        <img class="card-img img-fluid" src="{{collection.image.url}}" alt="Card image cap" id="collection-detail">
+                    </div>
+                </div>
+                <!-- col end -->
+                <div class="col-lg-7 mt-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="h2">{{collection.name}}</h1>
+                            <h6>Descrição:</h6>
+                            <p>{{collection.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="text-center">
+            <h3>Produtos Relacionados</h3>
+        </div>
+        <div class="container">
+            <div class="row">
+                {% for product in products %}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="{% url 'product_single' product.id %}" style="text-decoration:none; color: black;">
+                    <div class="card" style="width: 18rem; display: flex; flex-direction: column; height: 500px;">
+                      <div class="card-img-container" style="height: 350px; overflow: hidden;">
+                        <img src="{{ product.path.url }}" class="card-img-top" alt="{{ product.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+                      </div>
+                      <div class="card-body text-center" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <hr style="margin: 2px 0;">
+                        <p class="text-center" style="font-size: 16px; margin: 10px 0;">Descrição: {{ product.description }}</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                {% endfor %}
+              </div>
+        </div>
+        
+    </section>
+   
+{% endblock %}

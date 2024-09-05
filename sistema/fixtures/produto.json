@@ -1,0 +1,98 @@
+[
+    {
+        "model": "produto.product", 
+
+        "pk": 1,
+        "fields":{
+            "name": "Sueter Branco",
+            "description": "Sueter de Malha branca",
+            "type": 6,
+            "collection": 1,
+            "path": "\\img\\imgfix\\inverno01.png"
+        }
+    },
+    {
+        "model": "produto.product", 
+
+        "pk": 2,
+        "fields":{
+            "name": "Sueter de lã",
+            "description": "Sueter de lã com degrade de cores",
+            "type": 6,
+            "collection": 1,
+            "path": "\\img\\imgfix\\inverno02.png"
+        }
+    },
+    {
+        "model": "produto.product", 
+
+        "pk": 3,
+        "fields":{
+            "name": "Jaqueta Branca",
+            "description": "Jaqueta de lã branca",
+            "type": 2,
+            "collection": 1,
+            "path": "\\img\\imgfix\\inverno03.png"
+        }
+    },
+    {
+        "model": "produto.product", 
+
+        "pk": 4,
+        "fields":{
+            "name": "Moletom Vermelho",
+            "description": "Moletom vermelho",
+            "type": 7,
+            "collection": 1,
+            "path": "\\img\\imgfix\\inverno04.png"
+        }
+    },
+    {
+        "model": "produto.product", 
+
+        "pk": 5,
+        "fields":{
+            "name": "Conjunto de outono",
+            "description": "Conjunto de Outono em tons pretos",
+            "type": 8,
+            "collection": 3,
+            "path": "\\img\\imgfix\\outono01.png"
+        }
+    },
+    {
+        "model": "produto.product", 
+
+        "pk": 6,
+        "fields":{
+            "name": "Sobretudo bege",
+            "description": "Sobretudo semi-aberto bege",
+            "type": 9,
+            "collection": 3,
+            "path": "\\img\\imgfix\\outono02.png"
+        }
+    },
+    {
+        "model": "produto.product", 
+
+        "pk": 7,
+        "fields":{
+            "name": "Camisa branca Estampada",
+            "description": "Camisa de botão branca com estampa laranja",
+            "type": 1,
+            "collection": 4,
+            "path": "\\img\\imgfix\\primavera01.png"
+        }
+    },
+    {
+        "model": "produto.product", 
+
+        "pk": 8,
+        "fields":{
+            "name": "Vestido Simples Vermelho",
+            "description": "Vestido simples, vermelho e curto de verão com babado obro a ombro",
+            "type": 4,
+            "collection": 2,
+            "path": "\\img\\imgfix\\verao04.png"
+        }
+    }
+]

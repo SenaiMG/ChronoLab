@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+        <title>base</title>
+    {% endblock %}
+    <style>
+        @font-face {
+            font-family: Monda;
+            src: url("{% static 'assets/fonts/mondapick/Mondapick.ttf' %}") format(truetype);
+        }
+        @font-face {
+            font-family: LTSuperior;
+            src: url("{% static 'assets/fonts/lt_superior/LTSuperior-Medium.otf' %}") format(opentype);
+        }
+        @media only screen and (max-width: 770px) {
+            h1, strong{
+        
+            font-family: Monda !important;
+            font-size: 24px !important;
+                
+            }
+        }
+        
+        h1, strong{
+            font-family: Monda !important;
+            font-size: 60px 
+        }
+        p, h5, h4, h3, h2 {
+            font-family: LTSuperior !important;
+        }
+        p{
+            font-size: 20px;
+        }
+        h5{
+            font-size: 25px;
+        }
+    </style>
+    {% block style %}
+    {% endblock %}
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    {% include 'users/partials/_nav.html' %}
+    {% include 'users/partials/_messages.html' %}
+    
+    {% block content %}
+    {% endblock %}
+    {% include 'users/partials/_footer.html' %}
+
+    {% block scripts %}
+    {% endblock %}
+
+    {% include 'users/partials/_register.html' %}
+    {% include 'users/partials/_login.html' %}
+
+   
+
+
+</body>
+</html>
