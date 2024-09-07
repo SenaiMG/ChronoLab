@@ -98,7 +98,7 @@ class CreateProduct(View):
             product = form.save()
             if product:
                 messages.success(request, "Produto criado com sucesso!")
-                return redirect('all_products')
+                return redirect('dash_products')
             else:
                 messages.error(request, "Erro ao criar produto.")
             listemail = UserService.list_all_email_users()
@@ -108,7 +108,7 @@ class CreateProduct(View):
                 recipient_list= listemail
             )
             messages.success(request, "Produto criado com sucesso!")
-            return redirect('all_products')
+            return redirect('dash_products')
         else:
             messages.error(request, "Erro ao criar produto.")
         return render(request, self.template_name, {'form': form})
