@@ -40,6 +40,7 @@
   <div class="container">
     <div class="row">
       {% for collection in collections %}
+      {% if collection.image %}
       <div class="col-sm-4 mb-3 mb-sm-0 pb-3">
         <div class="card border-2">
           <div class="card-body text-end">
@@ -74,6 +75,7 @@
         </div>
     </div>
     {% include 'colecao/partials/_edit_collection.html' %}
+    {% endif %}
       {% endfor %}
     </div>
     <nav aria-label="Page navigation example">

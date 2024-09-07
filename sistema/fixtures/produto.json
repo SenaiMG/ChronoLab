@@ -7,7 +7,7 @@
             "name": "Sueter Branco",
             "description": "Sueter de Malha branca",
             "type": 6,
-            "collection": 1,
+            "collection": 8,
             "path": "\\img\\imgfix\\inverno01.png"
         }
     },
@@ -19,7 +19,7 @@
             "name": "Sueter de lã",
             "description": "Sueter de lã com degrade de cores",
             "type": 6,
-            "collection": 1,
+            "collection": 8,
             "path": "\\img\\imgfix\\inverno02.png"
         }
     },
@@ -31,7 +31,7 @@
             "name": "Jaqueta Branca",
             "description": "Jaqueta de lã branca",
             "type": 2,
-            "collection": 1,
+            "collection": 8,
             "path": "\\img\\imgfix\\inverno03.png"
         }
     },
@@ -43,7 +43,7 @@
             "name": "Moletom Vermelho",
             "description": "Moletom vermelho",
             "type": 7,
-            "collection": 1,
+            "collection": 8,
             "path": "\\img\\imgfix\\inverno04.png"
         }
     },
@@ -55,7 +55,7 @@
             "name": "Conjunto de outono",
             "description": "Conjunto de Outono em tons pretos",
             "type": 8,
-            "collection": 3,
+            "collection": 6,
             "path": "\\img\\imgfix\\outono01.png"
         }
     },
@@ -67,7 +67,7 @@
             "name": "Sobretudo bege",
             "description": "Sobretudo semi-aberto bege",
             "type": 9,
-            "collection": 3,
+            "collection": 6,
             "path": "\\img\\imgfix\\outono02.png"
         }
     },
@@ -79,7 +79,7 @@
             "name": "Camisa branca Estampada",
             "description": "Camisa de botão branca com estampa laranja",
             "type": 1,
-            "collection": 4,
+            "collection": 7,
             "path": "\\img\\imgfix\\primavera01.png"
         }
     },
@@ -91,7 +91,7 @@
             "name": "Vestido Simples Vermelho",
             "description": "Vestido simples, vermelho e curto de verão com babado obro a ombro",
             "type": 4,
-            "collection": 2,
+            "collection": 5,
             "path": "\\img\\imgfix\\verao04.png"
         }
     }
