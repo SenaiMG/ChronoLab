@@ -1,6 +1,12 @@
-
 {% load static %}
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style=" width: 100%; height: 60vh;">
+<style>
+  @media only screen and (max-width:700px){
+    .carousel-height{
+      height: 25vh !important;
+    } 
+  }
+</style>
+<div id="carouselExampleAutoplaying" class="carousel carousel-height slide" data-bs-ride="carousel" style=" width: 100%; height: 60vh;">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img style="border-radius: 0 !important;" src="{% static 'assets/img/car5.jpg' %}" class="d-block" style="width: 100%; height: 60vh;" alt="...">
